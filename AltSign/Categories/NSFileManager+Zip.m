@@ -221,7 +221,7 @@ char ALTDirectoryDeliminator = '/';
             
             short permissions = (info.external_fa >> 16) & 0x01FF;
             if (permissions == 0) {
-                // No Unix mode bits set â archive was likely created on Windows.
+                // No Unix mode bits set -- archive was likely created on Windows.
                 // Use a readable default so signing can proceed. (Fixes issue #447.)
                 permissions = 0644;
             }
